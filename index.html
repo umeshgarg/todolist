@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="validate.js"></script>
+</head>
+
+<body>
+    <h1 align="center">To-DO List</h1>
+        <center>
+            <p>Add any activity.</p>
+        </center>
+
+    <form name='toDoList' onsubmit="addActivity(event);">
+        <div class="container">
+            <div class="activity-input">
+                <label for="activity"><b>Enter activity</b></label>
+                <input type="text" placeholder="Activity" name="activity" id="activity">
+            </div>
+
+            <div>
+                <input type="submit" value="Add">
+            </div>
+            <br>
+
+            <table align='center' border=1 cellspacing=2 cellpadding=5 id="table">
+                <tr>
+                    <th>Activity</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+
+    </form>
+    <form name='searchResults' onsubmit="searchActivity(event);">
+        <div class="search-input">
+            <label for="search"><b>Enter query</b></label>
+            <input type="text" placeholder="Search" name="search" id="search">
+        </div>
+        <div>
+            <button value="Search" onclick="searchActivity(event)">Search</button>
+        </div>
+
+        <div>
+            <h4 id="searchResults"></h4>
+        </div>
+
+        <br>
+    </form>
+
+</body>
+
+</html>
